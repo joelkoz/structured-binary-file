@@ -17,6 +17,10 @@
     "circular",
     "flat"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joelkoz/structured-binary-file.git"
+  },  
   "author": "Joel Kozikowski",
   "license": "ISC",
   "dependencies": {
