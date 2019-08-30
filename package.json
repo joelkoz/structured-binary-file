@@ -1,0 +1,25 @@
+{
+  "name": "structured-binary-file",
+  "version": "0.0.5",
+  "description": "Reads and writes data records stored in fixed width binary. CircularFile adds 'fixed record count' files to the mix",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "structure",
+    "structured",
+    "binary",
+    "file",
+    "record",
+    "fixed",
+    "length",
+    "circular",
+    "flat"
+  ],
+  "author": "Joel Kozikowski",
+  "license": "ISC",
+  "dependencies": {
+    "binary-parser-encoder": "^1.4.4"
+  }
+}
