@@ -20,8 +20,10 @@
     "encode",
     "decode",
     "unpack",
+    "embedded",
     "database",
-    "dbase"
+    "dbase",
+    "persistence"
   ],
   "repository": {
     "type": "git",
