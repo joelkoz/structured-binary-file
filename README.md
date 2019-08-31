@@ -10,7 +10,7 @@ Files composed of fixed width binary records have several advantages over text b
 
 
 Records in FixedRecordFile and its derivitives are defined using the binary encoder/decoder found in the
-project binary-parser-encoder[https://www.npmjs.com/package/binary-parser-encoder].
+project [binary-parser-encoder](https://www.npmjs.com/package/binary-parser-encoder).
 
 Here is an example (complete examples can be found in the src/examples directory):
 ```
@@ -35,11 +35,11 @@ var file = new FixedRecordFile(PersonRecord);
 // Open the file...
 file.open("data-fixed-example.dat");
 
-let rec = {  id: x, 
+let rec = {  id: 1, 
                 firstName: "John",
-                lastName: `Doe${x}`, 
+                lastName: "Doe", 
                 address:  {
-                    number: x*10000 + 321,
+                    number: 10321,
                     street: "Main St.",
                     city: "Everytown",
                     state: "DC",
@@ -47,7 +47,7 @@ let rec = {  id: x,
                 }
             };
 
-console.log(`Adding record ${x} as ${JSON.stringify(rec)}`);
+console.log(`Adding record as ${JSON.stringify(rec)}`);
 file.appendRecord(rec);
 
 
