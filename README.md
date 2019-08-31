@@ -1,6 +1,6 @@
 structured-binary-file
 ======================
-FixedRecordFile is a class that reads and writes binary data to fixed width record files. It provides an effecient storage mechanism similar to C's struct, yet keeps the convenience of working with Javascript objects.
+FixedRecordFile is a lightweight record manager that and writes binary data to fixed width record files. It provides an effecient storage mechanism similar to C's struct, yet keeps the convenience of working with Javascript objects.
 
 CircularFile builds on FixedRecordFile but limits storage to a maximum number of records. Once that record limit 
 has been reached, new appends drop the oldest record to make room for the newer record.  This makes implementing 
