@@ -1,14 +1,13 @@
 structured-binary-file
 ======================
-Classes that read and write binary data to fixed with structured files - the way databases used to be stored on PCs before SQL came around ;)
+FixedRecordFile is a class that reads and writes binary data to fixed width record files. It provides an effecient storage mechanism similar to C's struct, yet keeps the convenience of working with Javascript objects.
 
-Files composed of fixed width binary records have an advantage in that records can be quickly retrieved based on a
-simple calculation.  They are generally smaller than text based storage in that numbers are stored in their binary representation vs character sequences, and the field values are based on record position vs. some other type of
-data value delimeter.
+CircularFile builds on FixedRecordFile but limits storage to a maximum number of records. Once that record limit 
+has been reached, new appends drop the oldest record to make room for the newer record.  This makes implementing 
+things like rolling logs very simple.
 
-This module also contains an implementation of a CircularFile, which builds on FixedRecordFile but limits it to
-a maximum number of records.  Once that record limit has been reached, new appends drop the oldest record for
-the newer record.  This makes implementing things like rolling logs very simple.
+Files composed of fixed width binary records have several advantages over text based storage. Records can be quickly retrieved based on a simple calculation. They are generally smaller than text based storage in that numbers are stored in their binary representation vs character sequences. Finally, field values are based on column position vs. some other type of data value delimeter being stored in the file.
+
 
 Records in FixedRecordFile and its derivitives are defined using the binary encoder/decoder found in the
 project binary-parser-encoder[https://www.npmjs.com/package/binary-parser-encoder].
