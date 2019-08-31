@@ -19,7 +19,9 @@
     "struct",
     "encode",
     "decode",
-    "unpack"
+    "unpack",
+    "database",
+    "dbase"
   ],
   "repository": {
     "type": "git",
