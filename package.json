@@ -15,7 +15,11 @@
     "fixed",
     "length",
     "circular",
-    "flat"
+    "flat",
+    "struct",
+    "encode",
+    "decode",
+    "unpack"
   ],
   "repository": {
     "type": "git",
