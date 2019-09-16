@@ -1,6 +1,6 @@
 {
   "name": "structured-binary-file",
-  "version": "0.0.6",
+  "version": "1.0.0",
   "description": "Reads and writes data records stored in fixed width binary. CircularFile adds 'fixed record count' files to the mix",
   "main": "index.js",
   "scripts": {
