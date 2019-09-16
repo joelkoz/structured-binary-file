@@ -87,6 +87,12 @@ module.exports = class FixedRecordFile {
         if (written != this.headerSize) {
             throw new Error(`Could not write new header (tried ${this.headerSize} bytes, wrote ${written})`);            
         }
+
+        // Close and re-open the file in read mode. We want to be in random access mode
+        // for the duration of using this file.
+        fs.closeSync(this.fd);
+        this.fd = fs.openSync(fileName, "r+");
+
         this.header = this.createHeader();
         this.header.recordSize = this.recordSize;
         this.writeHeader();
