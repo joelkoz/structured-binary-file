@@ -7,7 +7,7 @@ const Parser = require("binary-parser-encoder").Parser;
 let TestRecord = Parser.start()
                         .uint16("id")
                         .string("name", { length: 25, trim: true })
-                        .double("insertNumber");
+                        .doublebe("insertNumber");
 
 
 // Define a CircularFile as a collection of at most five of
